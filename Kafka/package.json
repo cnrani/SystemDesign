@@ -1,0 +1,33 @@
+{
+  "name": "kafka-playground",
+  "version": "1.0.0",
+  "description": "A local Kafka playground for testing and development",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "producer": "node examples/producer.js",
+    "consumer": "node examples/consumer.js",
+    "admin": "node examples/admin.js",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    "test": "node test/test.js"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "kafka",
+    "playground",
+    "docker",
+    "messaging",
+    "streaming"
+  ],
+  "author": "",
+  "license": "MIT"
+}
