@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  bloom-filter-api:
+    build: .
+    ports:
+      - "8001:8000"
+    volumes:
+      - .:/app
+    environment:
+      - BLOOM_FILTER_SIZE=1000000
+      - FALSE_POSITIVE_RATE=0.01
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload 
